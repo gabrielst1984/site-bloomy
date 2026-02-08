@@ -44,10 +44,7 @@
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
                     <h4 class="serif h5 mb-3">Limpeza de Pele</h4>
                     <p class="small text-muted mb-4">Descrição curta...</p>
-                    <button 
-                        data-cal-link="bloomy/limpeza-pele-jeniffer" 
-                        data-cal-namespace="atendimento" 
-                        class="btn btn-outline-dark rounded-pill">Agendar</button>
+                    <button data-cal-link="bloomy/limpeza-pele-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
                 </div>
             </div>
     
@@ -55,10 +52,7 @@
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
                     <h4 class="serif h5 mb-3">Microagulhamento</h4>
                     <p class="small text-muted mb-4">Descrição curta...</p>
-                    <button 
-                        data-cal-link="bloomy/microagulhamento-jeniffer" 
-                        data-cal-namespace="atendimento" 
-                        class="btn btn-outline-dark rounded-pill">Agendar</button>
+                    <button data-cal-link="bloomy/microagulhamento-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
                 </div>
             </div>
         </div>
@@ -78,13 +72,13 @@
         s.async = true;
         d.head.appendChild(s);
     
-        C.Cal("init", "atendimento", { origin: "https://app.cal.com" });
+        // Inicialização GLOBAL (sem strings extras)
+        C.Cal("init", { origin: "https://app.cal.com" });
     
-        C.Cal("ns:atendimento", "ui", {
+        // Configuração de UI Direta
+        C.Cal("ui", {
           "theme": "light",
-          "styles": { 
-            "branding": { "brandColor": "#C5A076" } 
-          },
+          "styles": { "branding": { "brandColor": "#C5A076" } },
           "hideEventTypeDetails": false,
           "layout": "month_view"
         });
