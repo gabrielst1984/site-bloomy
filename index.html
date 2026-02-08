@@ -78,10 +78,9 @@
         s.async = true;
         d.head.appendChild(s);
     
-        // Inicializamos com um Namespace chamado 'atendimento'
         C.Cal("init", "atendimento", { origin: "https://app.cal.com" });
-        
-        C.Cal("ui", {
+    
+        C.Cal("ns:atendimento", "ui", {
           "theme": "light",
           "styles": { 
             "branding": { "brandColor": "#C5A076" } 
