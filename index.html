@@ -39,33 +39,26 @@
     </section>
 
     <section id="procedimentos" class="container py-5">
-        <div class="text-center mb-5">
-            <h2 class="serif h3">Nossos Procedimentos</h2>
-            <p class="text-muted">Selecione o serviço para agendar seu horário</p>
-        </div>
-    
         <div class="row g-4 justify-content-center">
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <h4 class="serif h5 mb-3">Limpeza de Pele Profunda</h4>
-                    <p class="small text-muted mb-4">Remoção de impurezas e renovação celular para uma pele radiante.</p>
-                    <button data-cal-link="bloomy/limpeza-pele-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
+                    <h4 class="serif h5 mb-3">Limpeza de Pele</h4>
+                    <p class="small text-muted mb-4">Descrição curta...</p>
+                    <button 
+                        data-cal-link="bloomy/limpeza-pele-jeniffer" 
+                        data-cal-namespace="atendimento" 
+                        class="btn btn-outline-dark rounded-pill">Agendar</button>
                 </div>
             </div>
     
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
                     <h4 class="serif h5 mb-3">Microagulhamento</h4>
-                    <p class="small text-muted mb-4">Tratamento para rejuvenescimento e melhora da textura da pele.</p>
-                    <button data-cal-link="bloomy/microagulhamento-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4 text-center bg-white" style="border: 1px solid var(--gold) !important;">
-                    <h4 class="serif h5 mb-3">Avaliação Personalizada</h4>
-                    <p class="small text-muted mb-4">Ideal para quem não sabe por onde começar.</p>
-                    <button data-cal-link="bloomy/avaliacao" class="btn btn-gold text-white rounded-pill">Agendar Agora</button>
+                    <p class="small text-muted mb-4">Descrição curta...</p>
+                    <button 
+                        data-cal-link="bloomy/microagulhamento-jeniffer" 
+                        data-cal-namespace="atendimento" 
+                        class="btn btn-outline-dark rounded-pill">Agendar</button>
                 </div>
             </div>
         </div>
@@ -80,12 +73,19 @@
           p(C.Cal, a);
         };
         C.Cal.q = C.Cal.q || [];
-        d.head.appendChild(d.createElement("script")).src = A;
-        C.Cal("init", { origin: L });
+        let s = d.createElement("script");
+        s.src = A;
+        s.async = true;
+        d.head.appendChild(s);
+    
+        // Inicializamos com um Namespace chamado 'atendimento'
+        C.Cal("init", "atendimento", { origin: "https://app.cal.com" });
         
         C.Cal("ui", {
           "theme": "light",
-          "styles": { "branding": { "brandColor": "#C5A076" } },
+          "styles": { 
+            "branding": { "brandColor": "#C5A076" } 
+          },
           "hideEventTypeDetails": false,
           "layout": "month_view"
         });
