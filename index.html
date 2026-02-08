@@ -43,47 +43,60 @@
         <a href="#agenda" class="btn-gold shadow">AGENDAR AVALIAÇÃO</a>
     </section>
 
-    <section id="agenda">
-        <div class="container text-center">
-            <h3 class="serif mb-5">Escolha seu horário</h3>
-            <div id="my-cal-inline" style="width:100%;height:800px;overflow:auto"></div>
-            
-            <script type="text/javascript">
-              (function (C, A, L) {
-                let p = function (a, ar) { a.q.push(ar); };
-                let d = C.document;
-                C.Cal = C.Cal || function () {
-                  let a = arguments;
-                  p(C.Cal, a);
-                };
-                C.Cal.q = C.Cal.q || [];
-                
-                let s = d.createElement("script");
-                s.src = A;
-                s.async = true;
-                d.head.appendChild(s);
-                
-                C.Cal("init", { origin: "https://app.cal.com" });
-            
-                // Se quiser mostrar a lista de todos os procedimentos:
-                C.Cal("inline", {
-                  elementOrSelector: "#my-cal-inline",
-                  calLink: "bloomy", 
-                  config: {
-                    "theme": "light",
-                    "layout": "month_view"
-                  }
-                });
-            
-                C.Cal("ui", {
-                  "styles": { "branding": { "brandColor": "#C5A076" } },
-                  "hideEventTypeDetails": false
-                });
-              })(window, "https://app.cal.com/embed/embed.js", "https://app.cal.com");
-            </script>
+    <section class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="serif h3">Nossos Procedimentos</h2>
+            <p class="text-muted">Selecione o serviço para agendar seu horário</p>
+        </div>
+    
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                    <h4 class="serif h5 mb-3">Limpeza de Pele Profunda</h4>
+                    <p class="small text-muted mb-4">Dsddsdsd sdfsdfdfsdfs.</p>
+                    <button data-cal-link="bloomy/limpeza-pele-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                    <h4 class="serif h5 mb-3">Microagulhamento</h4>
+                    <p class="small text-muted mb-4">Dhfghfghf dfgdff.</p>
+                    <button data-cal-link="bloomy/microagulhamento-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
+                </div>
+            </div>
+    
+            <!--<div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4 text-center bg-white border-gold" style="border: 1px solid #C5A076 !important;">
+                    <h4 class="serif h5 mb-3">Avaliação Estética</h4>
+                    <p class="small text-muted mb-4">Para sua primeira consulta ou novos protocolos.</p>
+                    <button data-cal-link="bloomy/avaliacao" class="btn btn-gold text-white rounded-pill" style="background-color: #C5A076;">Agendar Agora</button>
+                </div>
+            </div>-->
         </div>
     </section>
-
+    
+    <script type="text/javascript">
+      (function (C, A, L) {
+        let p = function (a, ar) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+          let a = arguments;
+          p(C.Cal, a);
+        };
+        C.Cal.q = C.Cal.q || [];
+        d.head.appendChild(d.createElement("script")).src = A;
+        C.Cal("init", { origin: L });
+        
+        // Configura o visual do Modal
+        C.Cal("ui", {
+          "theme": "light",
+          "styles": { "branding": { "brandColor": "#C5A076" } },
+          "hideEventTypeDetails": false,
+          "layout": "month_view"
+        });
+      })(window, "https://app.cal.com/embed/embed.js", "https://app.cal.com");
+    </script>
     <footer class="py-5 text-center small text-muted">
         © 2026 Bloomy Estética Avançada | São Paulo
     </footer>
