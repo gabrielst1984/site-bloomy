@@ -5,100 +5,248 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloomy | Dra. Jeniffer Campelo - Estética Avançada</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Descubra a sua melhor versão no Brooklin. Harmonização, Limpeza de Pele e Microagulhamento com a Dra. Jeniffer Campelo.">
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        :root { --gold: #C5A076; --nude: #FAF7F5; --dark: #2D2D2D; }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--nude); color: var(--dark); margin: 0; }
+        :root { 
+            --gold: #C5A076; 
+            --gold-light: #e0c9af;
+            --nude: #FAF7F5; 
+            --dark: #1a1a1a; 
+            --text-muted: #666;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--nude); 
+            color: var(--dark); 
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
         .serif { font-family: 'Playfair Display', serif; }
-        
-        /* Layout */
-        .hero { padding: 100px 0 60px; text-align: center; }
-        .brand-logo { letter-spacing: 8px; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; }
-        
-        /* Cards Premium */
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal { animation: fadeInUp 1s ease forwards; }
+
+        /* Hero Section Premium */
+        .hero { 
+            padding: 160px 0 100px; 
+            text-align: center;
+            background: linear-gradient(180deg, rgba(250,247,245,1) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        .brand-logo { 
+            letter-spacing: 12px; 
+            color: var(--gold); 
+            text-transform: uppercase; 
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .hero h1 { 
+            font-size: clamp(2.5rem, 5vw, 4rem); 
+            font-weight: 400;
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* Seção Sobre / Conceito */
+        .concept-section { padding: 80px 0; background: #fff; }
+
+        /* Cards de Procedimentos - Minimalismo de Luxo */
         .card-procedimento {
             background: white;
             border: none;
-            border-radius: 24px;
-            padding: 40px 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            transition: 0.3s;
+            border-radius: 0; /* Design mais arquitetônico */
+            padding: 50px 40px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            text-decoration: none;
-            color: inherit;
+            border-bottom: 3px solid transparent;
         }
-        .card-procedimento:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
 
-        /* Botão "Zero Erro" */
+        .card-procedimento:hover { 
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--gold);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+        }
+
+        .card-category {
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Botões de Conversão */
         .btn-booking {
             display: inline-block;
-            background-color: var(--gold);
+            background-color: var(--dark);
             color: white !important;
-            padding: 14px 30px;
-            border-radius: 50px;
+            padding: 16px 35px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             font-weight: 600;
             text-decoration: none !important;
             transition: 0.3s;
-            margin-top: 20px;
             border: none;
-            text-align: center;
+            margin-top: 30px;
         }
-        .btn-booking:hover { filter: brightness(1.1); }
+
+        .btn-booking:hover { 
+            background-color: var(--gold);
+            letter-spacing: 3px;
+        }
+
+        .btn-outline-gold {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 15px 40px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            line-height: 65px;
+            transition: 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); color: #fff; }
+
+        footer { 
+            padding: 80px 0; 
+            text-align: center; 
+            background: white; 
+            border-top: 1px solid #eee;
+        }
     </style>
 </head>
 <body>
 
-    <header class="hero container">
-        <div class="brand-logo serif">Bloomy</div>
-        <h1 class="serif h2 mb-3">Dra. Jeniffer Campelo</h1>
-        <p class="text-muted">Estética Avançada • São Paulo</p>
+    <a href="https://wa.me/55119XXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header class="hero container reveal">
+        <span class="brand-logo">Bloomy • Estética Avançada</span>
+        <h1 class="serif">A ciência da beleza com <br><i>um olhar artístico.</i></h1>
+        <p>Especialista em realçar sua melhor versão através de protocolos exclusivos no coração do Brooklin.</p>
+        <a href="#agendar" class="btn-outline-gold serif">Explorar Protocolos</a>
     </header>
 
-    <section class="container py-5">
-        <div class="row g-4 justify-content-center">
+    <section class="concept-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <span class="card-category">O Conceito</span>
+                    <h2 class="serif mb-4">Por que a Bloomy?</h2>
+                    <p class="text-muted">Acreditamos que cada rosto conta uma história única. No Brooklin, a Dra. Jeniffer Campelo combina técnicas de estética avançada com uma sensibilidade artística para entregar resultados que não apenas transformam, mas preservam a sua essência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendar" class="container py-5">
+        <div class="row g-5 justify-content-center">
             
-            <div class="col-md-4">
-                <div class="card-procedimento text-center">
+            <div class="col-md-4 reveal" style="animation-delay: 0.2s;">
+                <div class="card-procedimento">
                     <div>
-                        <h3 class="serif h4 mb-3">Limpeza de Pele</h3>
-                        <p class="small text-muted mb-4">Protocolo de desintoxicação e renovação.</p>
+                        <span class="card-category">Saúde da Pele</span>
+                        <h3 class="serif h4 mb-3">Protocolo Glow</h3>
+                        <p class="small text-muted mb-4">Muito além de uma limpeza de pele. Uma desintoxicação profunda com hidratação de alta performance para um brilho imediato.</p>
                     </div>
-                    <a href="https://cal.com/bloomy/limpeza-pele-jeniffer" target="_blank" class="btn-booking">Agendar Horário</a>
+                    <a href="https://cal.com/bloomy/limpeza-pele-jeniffer" target="_blank" class="btn-booking">Garantir Vaga</a>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card-procedimento text-center">
+            <div class="col-md-4 reveal" style="animation-delay: 0.4s;">
+                <div class="card-procedimento">
                     <div>
-                        <h3 class="serif h4 mb-3">Microagulhamento</h3>
-                        <p class="small text-muted mb-4">Indução de colágeno para textura e viço.</p>
+                        <span class="card-category">Renovação Celular</span>
+                        <h3 class="serif h4 mb-3">Indução de Colágeno</h3>
+                        <p class="small text-muted mb-4">Microagulhamento de precisão para tratar textura, poros e cicatrizes, devolvendo a densidade à sua pele.</p>
                     </div>
-                    <a href="https://cal.com/bloomy/microagulhamento-jeniffer" target="_blank" class="btn-booking">Agendar Horário</a>
+                    <a href="https://cal.com/bloomy/microagulhamento-jeniffer" target="_blank" class="btn-booking">Reservar Horário</a>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card-procedimento text-center" style="border: 1px solid var(--gold);">
+            <div class="col-md-4 reveal" style="animation-delay: 0.6s;">
+                <div class="card-procedimento" style="background: var(--dark); color: white;">
                     <div>
-                        <h3 class="serif h4 mb-3">Avaliação</h3>
-                        <p class="small text-muted mb-4">Plano de tratamento personalizado.</p>
+                        <span class="card-category" style="color: var(--gold);">O Primeiro Passo</span>
+                        <h3 class="serif h4 mb-3" style="color: white;">Consulta Estética</h3>
+                        <p class="small mb-4" style="color: #aaa;">Uma análise minuciosa da sua face para criarmos o seu Plano de Tratamento Individualizado.</p>
                     </div>
-                    <a href="https://cal.com/bloomy/avaliacao" target="_blank" class="btn-booking">Agendar Agora</a>
+                    <a href="https://cal.com/bloomy/avaliacao" target="_blank" class="btn-booking" style="background: var(--gold);">Agendar Consultoria</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <footer class="py-5 text-center text-muted small">
-        📍 Brooklin, São Paulo<br>
-        © 2026 Bloomy Pro
+    <section class="py-5 text-center">
+        <div class="container">
+            <h2 class="serif" style="font-size: 1.5rem; color: var(--gold);">"A beleza começa no momento em que você decide ser você mesma."</h2>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2 class="serif h4 mb-4">Dra. Jeniffer Campelo</h2>
+            <p class="text-muted small">
+                <i class="fas fa-map-marker-alt me-2"></i> Brooklin, São Paulo<br>
+                <i class="fas fa-certificate me-2"></i> Especialista em Estética Avançada
+            </p>
+            <div class="mt-5" style="letter-spacing: 3px; font-size: 0.6rem; opacity: 0.5;">
+                © 2026 BLOOMY • TODOS OS DIREITOS RESERVADOS
+            </div>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
