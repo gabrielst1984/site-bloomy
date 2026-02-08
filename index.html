@@ -3,92 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Bloomy | Dra. Jeniffer Campelo - Estética Avançada</title>
-    <meta name="description" content="Especialista em Estética Avançada. Limpeza de pele, microagulhamento e protocolos exclusivos.">
+    <meta name="description" content="Especialista em Estética Avançada no Brooklin, SP. Resultados naturais em Harmonização e Cuidados com a Pele.">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        :root { --gold: #C5A076; --nude: #FAF7F5; --dark: #2D2D2D; }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--nude); color: var(--dark); }
+        :root {
+            --nude-bg: #FAF7F5;
+            --gold-accent: #C5A076;
+            --text-dark: #2D2D2D;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--nude-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
         .serif { font-family: 'Playfair Display', serif; }
-        
-        .hero { padding: 100px 0; text-align: center; }
-        .btn-gold { 
-            background-color: var(--gold); color: white; 
-            border: none; padding: 15px 40px; border-radius: 50px;
-            font-weight: 600; text-decoration: none; transition: 0.3s;
+
+        /* Estilização da Marca */
+        .brand-logo {
+            letter-spacing: 8px;
+            font-weight: 500;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Cards de Procedimentos */
+        .card-procedimento {
+            background: var(--white);
+            border: none;
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-procedimento:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+
+        /* Botões */
+        .btn-premium {
+            background-color: var(--gold-accent);
+            color: var(--white) !important;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            text-decoration: none;
             display: inline-block;
         }
-        .btn-gold:hover { background-color: #a6855f; transform: translateY(-2px); color: white; }
 
-        .card { transition: transform 0.3s ease; }
-        .card:hover { transform: translateY(-5px); }
+        .btn-premium:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 10px 20px rgba(197, 160, 118, 0.3);
+        }
+
+        .btn-outline-gold {
+            border: 2px solid var(--gold-accent);
+            color: var(--gold-accent);
+            background: transparent;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold-accent);
+            color: var(--white);
+        }
+
+        footer {
+            padding: 60px 0;
+            background: var(--white);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            margin-top: 80px;
+        }
     </style>
 </head>
 <body>
 
-    <section class="hero container">
-        <h2 class="serif mb-4" style="letter-spacing: 4px; color: var(--gold);">BLOOMY</h2>
+    <header class="hero container">
+        <div class="brand-logo serif">Bloomy</div>
+        <p class="text-uppercase small mb-5" style="letter-spacing: 3px; color: #888;">Estética Avançada</p>
         
-        <h1 class="serif h2 mb-3">Dra. Jeniffer Campelo</h1>
-        <p class="mb-5 text-muted">Estética Avançada • SP</p>
+        <h1 class="serif">Dra. Jeniffer Campelo</h1>
+        <p class="lead mb-5 text-muted mx-auto" style="max-width: 600px;">
+            Realçando sua beleza natural através de ciência, técnica e um olhar personalizado. Unidade Brooklin.
+        </p>
         
-        <a href="#procedimentos" class="btn-gold shadow">VER PROCEDIMENTOS</a>
-    </section>
+        <a href="#procedimentos" class="btn-premium">CONHECER PROCEDIMENTOS</a>
+    </header>
 
     <section id="procedimentos" class="container py-5">
         <div class="row g-4 justify-content-center">
+            
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <h4 class="serif h5 mb-3">Limpeza de Pele</h4>
-                    <p class="small text-muted mb-4">Descrição curta...</p>
-                    <button data-cal-link="bloomy/limpeza-pele-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
+                <div class="card-procedimento text-center">
+                    <div>
+                        <h3 class="serif h4 mb-3">Limpeza de Pele Profunda</h3>
+                        <p class="text-muted small mb-4">Protocolo exclusivo para renovação celular e desintoxicação da pele.</p>
+                    </div>
+                    <button data-cal-link="bloomy/limpeza-pele-jeniffer" class="btn btn-outline-gold">Agendar Horário</button>
                 </div>
             </div>
-    
+
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                    <h4 class="serif h5 mb-3">Microagulhamento</h4>
-                    <p class="small text-muted mb-4">Descrição curta...</p>
-                    <button data-cal-link="bloomy/microagulhamento-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
+                <div class="card-procedimento text-center">
+                    <div>
+                        <h3 class="serif h4 mb-3">Microagulhamento</h3>
+                        <p class="text-muted small mb-4">Estímulo de colágeno para tratar cicatrizes, poros e textura da pele.</p>
+                    </div>
+                    <button data-cal-link="bloomy/microagulhamento-jeniffer" class="btn btn-outline-gold">Agendar Horário</button>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card-procedimento text-center" style="border: 1px solid var(--gold-accent);">
+                    <div>
+                        <h3 class="serif h4 mb-3">Avaliação Estética</h3>
+                        <p class="text-muted small mb-4">Análise completa para desenvolver seu plano de tratamento exclusivo.</p>
+                    </div>
+                    <button data-cal-link="bloomy/avaliacao" class="btn btn-premium">Agendar Avaliação</button>
+                </div>
+            </div>
+
         </div>
     </section>
-    
-    <script type="text/javascript">
-      (function (C, A, L) {
-        let p = function (a, ar) { a.q.push(ar); };
-        let d = C.document;
-        C.Cal = C.Cal || function () {
-          let a = arguments;
-          p(C.Cal, a);
-        };
-        C.Cal.q = C.Cal.q || [];
-        let s = d.createElement("script");
-        s.src = A;
-        s.async = true;
-        d.head.appendChild(s);
-    
-        // Inicialização GLOBAL (sem strings extras)
-        C.Cal("init", { origin: "https://app.cal.com" });
-    
-        // Configuração de UI Direta
-        C.Cal("ui", {
-          "theme": "light",
-          "styles": { "branding": { "brandColor": "#C5A076" } },
-          "hideEventTypeDetails": false,
-          "layout": "month_view"
-        });
-      })(window, "https://app.cal.com/embed/embed.js", "https://app.cal.com");
-    </script>
 
-    <footer class="py-5 text-center small text-muted">
-        <p>📍 Brooklin, São Paulo - SP</p>
-        © 2026 Bloomy Estética Avançada
+    <footer class="text-center">
+        <div class="container">
+            <p class="serif h5 mb-3">Bloomy Pro</p>
+            <p class="text-muted small mb-0">📍 Brooklin, São Paulo - SP</p>
+            <p class="text-muted mb-4" style="font-size: 0.8rem;">Atendimento exclusivo com hora marcada.</p>
+            <div class="mt-4">
+                <small class="text-uppercase" style="letter-spacing: 2px; color: #ccc;">© 2026 Todos os direitos reservados</small>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://app.cal.com/embed/embed.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            if (window.Cal) {
+                // Inicialização simplificada para evitar erros de 'undefined'
+                Cal("init", { origin: "https://app.cal.com" });
+                
+                Cal("ui", {
+                    "theme": "light",
+                    "styles": {
+                        "branding": { "brandColor": "#C5A076" }
+                    },
+                    "hideEventTypeDetails": false,
+                    "layout": "month_view"
+                });
+                console.log("Cal.com inicializado.");
+            }
+        });
+    </script>
 
 </body>
 </html>
