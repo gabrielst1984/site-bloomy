@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloomy | Estética Avançada</title>
+    <title>Bloomy | Dra. Jeniffer Campelo - Estética Avançada no Brooklin</title>
+    <meta name="description" content="Especialista em Estética Avançada no Brooklin, SP. Limpeza de pele, microagulhamento e protocolos exclusivos.">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,23 +14,17 @@
         body { font-family: 'Montserrat', sans-serif; background-color: var(--nude); color: var(--dark); }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* Estilo da Hero Section */
         .hero { padding: 100px 0; text-align: center; }
-        .profile-img { 
-            width: 180px; height: 180px; object-fit: cover; 
-            border-radius: 50%; border: 5px solid white; 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
         .btn-gold { 
             background-color: var(--gold); color: white; 
             border: none; padding: 15px 40px; border-radius: 50px;
             font-weight: 600; text-decoration: none; transition: 0.3s;
+            display: inline-block;
         }
         .btn-gold:hover { background-color: #a6855f; transform: translateY(-2px); color: white; }
 
-        /* Agenda Container */
-        #agenda { background: white; border-radius: 50px 50px 0 0; padding: 60px 0; margin-top: 40px; }
+        .card { transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body>
@@ -38,12 +33,12 @@
         <h2 class="serif mb-4" style="letter-spacing: 4px; color: var(--gold);">BLOOMY</h2>
         
         <h1 class="serif h2 mb-3">Dra. Jeniffer Campelo</h1>
-        <p class="mb-5 text-muted">Estética Avançada</p>
+        <p class="mb-5 text-muted">Estética Avançada • Brooklin, SP</p>
         
-        <a href="#agenda" class="btn-gold shadow">AGENDAR AVALIAÇÃO</a>
+        <a href="#procedimentos" class="btn-gold shadow">VER PROCEDIMENTOS</a>
     </section>
 
-    <section class="container py-5">
+    <section id="procedimentos" class="container py-5">
         <div class="text-center mb-5">
             <h2 class="serif h3">Nossos Procedimentos</h2>
             <p class="text-muted">Selecione o serviço para agendar seu horário</p>
@@ -53,7 +48,7 @@
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
                     <h4 class="serif h5 mb-3">Limpeza de Pele Profunda</h4>
-                    <p class="small text-muted mb-4">Dsddsdsd sdfsdfdfsdfs.</p>
+                    <p class="small text-muted mb-4">Remoção de impurezas e renovação celular para uma pele radiante.</p>
                     <button data-cal-link="bloomy/limpeza-pele-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
                 </div>
             </div>
@@ -61,18 +56,18 @@
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm p-4 text-center">
                     <h4 class="serif h5 mb-3">Microagulhamento</h4>
-                    <p class="small text-muted mb-4">Dhfghfghf dfgdff.</p>
+                    <p class="small text-muted mb-4">Tratamento para rejuvenescimento e melhora da textura da pele.</p>
                     <button data-cal-link="bloomy/microagulhamento-jeniffer" class="btn btn-outline-dark rounded-pill">Agendar</button>
                 </div>
             </div>
-    
-            <!--<div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4 text-center bg-white border-gold" style="border: 1px solid #C5A076 !important;">
-                    <h4 class="serif h5 mb-3">Avaliação Estética</h4>
-                    <p class="small text-muted mb-4">Para sua primeira consulta ou novos protocolos.</p>
-                    <button data-cal-link="bloomy/avaliacao" class="btn btn-gold text-white rounded-pill" style="background-color: #C5A076;">Agendar Agora</button>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4 text-center bg-white" style="border: 1px solid var(--gold) !important;">
+                    <h4 class="serif h5 mb-3">Avaliação Personalizada</h4>
+                    <p class="small text-muted mb-4">Ideal para quem não sabe por onde começar.</p>
+                    <button data-cal-link="bloomy/avaliacao" class="btn btn-gold text-white rounded-pill">Agendar Agora</button>
                 </div>
-            </div>-->
+            </div>
         </div>
     </section>
     
@@ -88,7 +83,6 @@
         d.head.appendChild(d.createElement("script")).src = A;
         C.Cal("init", { origin: L });
         
-        // Configura o visual do Modal
         C.Cal("ui", {
           "theme": "light",
           "styles": { "branding": { "brandColor": "#C5A076" } },
@@ -97,8 +91,10 @@
         });
       })(window, "https://app.cal.com/embed/embed.js", "https://app.cal.com");
     </script>
+
     <footer class="py-5 text-center small text-muted">
-        © 2026 Bloomy Estética Avançada | São Paulo
+        <p>📍 Brooklin, São Paulo - SP</p>
+        © 2026 Bloomy Estética Avançada
     </footer>
 
 </body>
