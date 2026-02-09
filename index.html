@@ -7,150 +7,147 @@
     <meta name="google-site-verification" content="KCnVOS-mPr2Sny3LehoKEA3l6yi-lw34gQ8-6xANuRM" />
     
     <title>Bloomy | Curadoria & Gerenciamento Facial</title>
-    <meta name="description" content="Especialista em naturalidade e gerenciamento de pele em São Paulo. Botox, Preenchimento e Bioestimuladores com a Dra. Jeniffer Campelo.">
+    <meta name="description" content="Especialista em naturalidade e gerenciamento de pele no Brooklin. Botox, Preenchimento e Bioestimuladores com a Dra. Jeniffer Campelo.">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bloomypro.com.br/">
     <meta property="og:title" content="Bloomy | Dra. Jeniffer Campelo - Estética Avançada">
     <meta property="og:description" content="Realce sua melhor versão com protocolos exclusivos e naturalidade preservada no coração do Brooklin.">
-    <meta property="og:image" content="https://bloomypro.com.br/share-thumb.jpg"> <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bloomy | Estética Avançada">
-    <meta name="twitter:description" content="Naturalidade e ciência no Brooklin, Vila Olímpia e Chácara Santo Antônio.">
-    <meta name="twitter:image" content="https://bloomypro.com.br/share-thumb.jpg">
-
-	<link rel="icon" type="image/png" href="img/favicon.png">
-	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-	
+    <meta property="og:image" content="https://bloomypro.com.br/share-thumb.jpg"> 
+    
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root { 
-            --gold: #C5A076; 
-            --gold-light: #e0c9af;
+            --gold: #B89774; 
+            --gold-light: #D4BDAC;
             --nude: #FAF7F5; 
-            --dark: #1a1a1a; 
-            --text-muted: #666;
+            --dark: #121212; 
+            --text-muted: #7A7A7A;
+            --white: #FFFFFF;
         }
 
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: var(--nude); 
             color: var(--dark); 
-            line-height: 1.8;
-            overflow-x: hidden;
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
         }
 
         .serif { font-family: 'Playfair Display', serif; }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .navbar-bloomy {
+            background-color: rgba(250, 247, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(184, 151, 116, 0.1);
+            padding: 20px 0;
         }
 
-        .reveal { animation: fadeInUp 1s ease forwards; }
-
         .hero { 
-            padding: 160px 0 100px; 
+            padding: 200px 0 120px; 
             text-align: center;
-            background: linear-gradient(180deg, rgba(250,247,245,1) 0%, rgba(255,255,255,0) 100%);
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 40px; left: 40px; right: 40px; bottom: 40px;
+            border: 1px solid rgba(184, 151, 116, 0.15);
+            pointer-events: none;
         }
 
         .brand-logo { 
-            letter-spacing: 12px; 
+            letter-spacing: 14px; 
             color: var(--gold); 
             text-transform: uppercase; 
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 40px;
             display: block;
         }
 
         .hero h1 { 
-            font-size: clamp(2.5rem, 5vw, 4rem); 
+            font-size: clamp(2.8rem, 6vw, 4.5rem); 
             font-weight: 400;
-            margin-bottom: 25px;
-            color: var(--dark);
+            margin-bottom: 30px;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            color: var(--text-muted);
-            font-weight: 300;
-        }
-
-        .concept-section { padding: 80px 0; background: #fff; }
+        .section-header { margin-bottom: 60px; text-align: center; }
 
         .card-procedimento {
-            background: white;
-            border: none;
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.03);
             padding: 50px 40px;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-bottom: 3px solid transparent;
         }
 
         .card-procedimento:hover { 
-            transform: translateY(-10px);
-            border-bottom: 3px solid var(--gold);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+            transform: translateY(-8px);
+            border-color: var(--gold-light);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
         }
 
         .card-category {
             text-transform: uppercase;
-            font-size: 0.7rem;
-            letter-spacing: 2px;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
             color: var(--gold);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-weight: 600;
             display: block;
         }
 
-        .btn-vip {
+        .btn-bloomy {
             display: inline-block;
-            background-color: var(--dark);
-            color: white !important;
-            padding: 16px 35px;
-            font-size: 0.8rem;
+            padding: 18px 40px;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             font-weight: 600;
             text-decoration: none !important;
-            transition: 0.3s;
+            transition: 0.4s;
             border: none;
             cursor: pointer;
             text-align: center;
         }
+
+        .btn-dark { background-color: var(--dark); color: var(--white) !important; }
+        .btn-dark:hover { background-color: var(--gold); }
         
-        .btn-vip:hover { 
-            background-color: var(--gold);
-            letter-spacing: 3px;
-        }
+        .btn-gold { background-color: var(--gold); color: var(--white) !important; }
+        .btn-gold:hover { background-color: var(--dark); }
 
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 40px; right: 40px;
             background-color: #25d366;
             color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            border-radius: 50%;
+            width: 65px; height: 65px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
             z-index: 1000;
-            width: 60px;
-            height: 60px;
-            line-height: 65px;
-            transition: 0.3s;
         }
 
-        footer { padding: 80px 0; text-align: center; background: white; border-top: 1px solid #eee; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal { animation: fadeInUp 1.2s ease forwards; }
+
+        footer { background: var(--white); padding: 100px 0 60px; text-align: center; border-top: 1px solid #eee; }
     </style>
 
     <script>
@@ -168,6 +165,12 @@
 </head>
 <body>
 
+    <nav class="navbar navbar-bloomy fixed-top">
+        <div class="container justify-content-center">
+            <span class="serif" style="font-size: 1.2rem; letter-spacing: 2px;">BLOOMY</span>
+        </div>
+    </nav>
+
     <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20entrar%20para%20a%20Lista%20VIP%20da%20Bloomy." 
        onclick="fbq('track', 'Contact', {content_name: 'Botao Flutuante'});" 
        class="whatsapp-float" rel="noopener" target="_blank">
@@ -175,167 +178,124 @@
     </a>
 
     <header class="hero container reveal">
-        <span class="brand-logo">Bloomy • Estética Avançada</span>
-        <h1 class="serif">Onde a ciência encontra a arte para revelar sua versão mais radiante.</i></h1>
-        <p>Especialista em naturalidade e gerenciamento de pele no coração do Brooklin.</p>
-        <a href="#agendar" class="btn-vip" style="background-color: transparent; border: 1px solid var(--gold); color: var(--gold) !important;">Conhecer Protocolos</a>
+        <span class="brand-logo">Dra. Jeniffer Campelo</span>
+        <h1 class="serif">Onde a ciência encontra a arte para revelar sua versão mais radiante.</h1>
+        <p>Curadoria estética e gerenciamento de pele com foco em naturalidade absoluta no Brooklin.</p>
     </header>
 
-    <section class="concept-section text-center">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <span class="card-category">O Conceito</span>
-                    <h2 class="serif mb-4">Inauguração em Breve</h2>
-                    <p class="text-muted">A Dra. Jeniffer Campelo traz para o Brooklin uma estética que respeita a sua essência. Unimos técnica avançada à sensibilidade para resultados fidedignos e elegantes.</p>
-                </div>
-            </div>
+    <section id="lista-vip" class="container py-5">
+        <div class="section-header reveal">
+            <span class="card-category">Fase de Pré-Inauguração</span>
+            <h2 class="serif">Inscrição na Lista VIP</h2>
+            <p class="text-muted">Garanta prioridade e condições exclusivas de abertura enviando uma mensagem.</p>
         </div>
-    </section>
-
-	<!--<section id="agendar" class="container py-5">
-        <div class="row g-5 justify-content-center">
-
-            <div class="col-md-4 reveal" style="animation-delay: 0.6s;">
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 reveal">
                 <div class="card-procedimento" style="background: var(--dark); color: white;">
                     <div>
-                        <span class="card-category" style="color: var(--gold);">O Primeiro Passo</span>
-                        <h3 class="serif h4 mb-3" style="color: white;">Consulta Estética</h3>
-                        <p class="small mb-4" style="color: #aaa;">Uma análise minuciosa da sua face para criarmos o seu Plano de Tratamento Individualizado.</p>
+                        <span class="card-category" style="color: var(--gold);">O Passo Zero</span>
+                        <h3 class="serif h4 mb-3">Consulta de Gerenciamento Facial</h3>
+                        <p class="small mb-4" style="color: #aaa;">Curadoria estética dos seus traços e desenho do seu plano de gerenciamento individualizado.</p>
                     </div>
-                    <a href="https://cal.com/bloomy/avaliacao" onclick="fbq('track', 'Contact', {content_name: 'Consulta Estetica'});" rel="noopener" target="_blank" class="btn-booking" ">Agendar Consulta</a>
-                </div>
-            </div>
-            
-            <div class="col-md-4 reveal" style="animation-delay: 0.2s;">
-                <div class="card-procedimento">
-                    <div>
-                        <span class="card-category">Saúde da Pele</span>
-                        <h3 class="serif h4 mb-3">Protocolo Glow</h3>
-                        <p class="small text-muted mb-4">Muito além de uma limpeza de pele. Uma desintoxicação profunda com hidratação de alta performance para um brilho imediato.</p>
-                    </div>
-                    <a href="https://cal.com/bloomy/limpeza-pele-jeniffer" onclick="fbq('track', 'Contact', {content_name: 'Limpeza de Pele'});" rel="noopener" target="_blank" class="btn-booking">Garantir Vaga</a>
+                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20prioridade%20na%20agenda%20de%20Consulta%20de%20Gerenciamento%20Facial." onclick="fbq('track', 'Contact', {content_name: 'VIP_Consulta'});" class="btn-bloomy btn-gold">Quero Prioridade</a>
                 </div>
             </div>
 
-            <div class="col-md-4 reveal" style="animation-delay: 0.4s;">
-                <div class="card-procedimento">
-                    <div>
-                        <span class="card-category">Renovação Celular</span>
-                        <h3 class="serif h4 mb-3">Indução de Colágeno</h3>
-                        <p class="small text-muted mb-4">Microagulhamento de precisão para tratar textura, poros e cicatrizes, devolvendo a densidade à sua pele.</p>
-                    </div>
-                    <a href="https://cal.com/bloomy/microagulhamento-jeniffer" onclick="fbq('track', 'Contact', {content_name: 'Microagulhamento'});" rel="noopener" target="_blank" class="btn-booking">Reservar Horário</a>
-                </div>
-            </div>
-
-        </div>
-    </section>-->
-
-	<section class="consulta-block reveal">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-7">
-                    <span class="text-uppercase" style="letter-spacing: 3px; font-size: 0.7rem; color: var(--gold);">O Ponto de Partida</span>
-                    <h2 class="serif mt-3 mb-4" style="font-size: 2.5rem;">Consulta de Gerenciamento Facial</h2>
-                    <p class="mb-5" style="opacity: 0.8;">Toda transformação começa com uma análise minuciosa. Na consulta, realizamos uma curadoria estética dos seus traços. Desenhamos um plano de gerenciamento que respeita o seu tempo, priorizando resultados elegantes e imperceptíveis para quem não te conhece, mas notáveis para quem te admira.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20prioridade%20para%20agendar%20minha%20Consulta%20de%20Gerenciamento%20Facial." 
-                       onclick="fbq('track', 'Contact', {content_name: 'Consulta'});" 
-                       rel="noopener" target="_blank" class="btn-vip" style="background-color: var(--gold);">Quero Prioridade na Agenda</a>
-                </div>
-            </div>
-        </div>
-    </section>
-	
-    <section class="container py-5">
-        <div class="text-center mb-5 reveal">
-            <span class="card-category">Viço & Textura</span>
-            <h2 class="serif">Saúde da Pele</h2>
-        </div>
-        <div class="row g-5 justify-content-center">
             <div class="col-md-4 reveal">
                 <div class="card-procedimento">
                     <div>
-                        <span class="card-category">Luminosidade</span>
-                        <h3 class="serif h4 mb-3">Protocolo Glow</h3>
-                        <p class="small text-muted mb-4">Muito além de uma limpeza de pele. Uma desintoxicação profunda para devolver o viço que o estresse urbano apaga.</p>
+                        <span class="card-category">Expressão</span>
+                        <h3 class="serif h4 mb-3">Botox Fresh & Prevent</h3>
+                        <p class="small text-muted mb-4">Gerenciamento das linhas de expressão preservando sua identidade e movimento natural.</p>
                     </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20entrar%20na%20lista%20VIP%20para%20o%20Protocolo%20Glow." onclick="fbq('track', 'Contact', {content_name: 'Glow'});" rel="noopener" target="_blank" class="btn-vip">Lista VIP</a>
+                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20entrar%20na%20lista%20VIP%20para%20o%20Botox." onclick="fbq('track', 'Contact', {content_name: 'VIP_Botox'});" class="btn-bloomy btn-dark">Lista VIP</a>
                 </div>
             </div>
-            
-            <div class="col-md-4 reveal" style="animation-delay: 0.2s;">
+
+            <div class="col-md-4 reveal">
+                <div class="card-procedimento">
+                    <div>
+                        <span class="card-category">Radiância</span>
+                        <h3 class="serif h4 mb-3">Protocolo Glow</h3>
+                        <p class="small text-muted mb-4">Desintoxicação e hidratação profunda para devolver o viço que o estresse urbano apaga.</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20entrar%20na%20lista%20VIP%20para%20o%20Protocolo%20Glow." onclick="fbq('track', 'Contact', {content_name: 'VIP_Glow'});" class="btn-bloomy btn-dark">Lista VIP</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendar-direto" class="container py-5" style="border-top: 1px solid rgba(0,0,0,0.05); margin-top: 50px;">
+        <div class="section-header reveal" style="padding-top: 50px;">
+            <span class="card-category">Pós-Inauguração</span>
+            <h2 class="serif">Agendamento Online</h2>
+            <p class="text-muted">Reserve seu horário diretamente em nossa agenda oficial.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 reveal">
+                <div class="card-procedimento" style="background: var(--dark); color: white;">
+                    <div>
+                        <span class="card-category" style="color: var(--gold);">O Passo Zero</span>
+                        <h3 class="serif h4 mb-3">Consulta de Gerenciamento Facial</h3>
+                        <p class="small mb-4" style="color: #aaa;">Análise minuciosa para criarmos o seu Plano de Tratamento Individualizado.</p>
+                    </div>
+                    <a href="https://cal.com/bloomy/avaliacao" onclick="fbq('track', 'Contact', {content_name: 'CAL_Consulta'});" target="_blank" class="btn-bloomy btn-gold">Agendar Agora</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal">
+                <div class="card-procedimento">
+                    <div>
+                        <span class="card-category">Expressão</span>
+                        <h3 class="serif h4 mb-3">Botox Fresh & Prevent</h3>
+                        <p class="small text-muted mb-4">Gerenciamento estratégico de rugas dinâmicas com foco em naturalidade.</p>
+                    </div>
+                    <a href="https://cal.com/bloomy/botox" onclick="fbq('track', 'Contact', {content_name: 'CAL_Botox'});" target="_blank" class="btn-bloomy btn-dark">Reservar Horário</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal">
+                <div class="card-procedimento">
+                    <div>
+                        <span class="card-category">Radiância</span>
+                        <h3 class="serif h4 mb-3">Protocolo Glow</h3>
+                        <p class="small text-muted mb-4">Sessão completa de limpeza profunda e nutrição celular imediata.</p>
+                    </div>
+                    <a href="https://cal.com/bloomy/limpeza-pele-jeniffer" onclick="fbq('track', 'Contact', {content_name: 'CAL_Glow'});" target="_blank" class="btn-bloomy btn-dark">Agendar Sessão</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal">
                 <div class="card-procedimento">
                     <div>
                         <span class="card-category">Renovação</span>
                         <h3 class="serif h4 mb-3">Indução de Colágeno</h3>
-                        <p class="small text-muted mb-4">Microagulhamento de precisão para tratar textura e devolver a densidade à sua pele.</p>
+                        <p class="small text-muted mb-4">Microagulhamento de precisão para tratar textura e densidade da pele.</p>
                     </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20entrar%20na%20lista%20VIP%20para%20o%20Microagulhamento." onclick="fbq('track', 'Contact', {content_name: 'Microagulhamento'});" rel="noopener" target="_blank" class="btn-vip">Lista VIP</a>
+                    <a href="https://cal.com/bloomy/microagulhamento-jeniffer" onclick="fbq('track', 'Contact', {content_name: 'CAL_Micro'});" target="_blank" class="btn-bloomy btn-dark">Reservar Horário</a>
                 </div>
             </div>
-        </div>
-    </section>
-	
-    <section id="agendar" class="container py-5">
-        <div class="text-center mb-5 reveal">
-            <span class="card-category">Estrutura & Harmonia Sutil</span>
-            <h2 class="serif">Naturalidade & Contorno</h2>
-        </div>
-        <div class="row g-5 justify-content-center">
 
             <div class="col-md-4 reveal">
                 <div class="card-procedimento">
                     <div>
-                        <span class="card-category">Prevenção</span>
-                        <h3 class="serif h4 mb-3">Botox Fresh & Prevent</h3>
-                        <p class="small text-muted mb-4">Gerenciamento estratégico das linhas de expressão para um rosto descansado e natural, preservando sua identidade.</p>
+                        <span class="card-category">Refinamento</span>
+                        <h3 class="serif h4 mb-3">Sculpting & Contour</h3>
+                        <p class="small text-muted mb-4">Realce de pontos estratégicos de volume e contorno facial.</p>
                     </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20entrar%20na%20lista%20VIP%20para%20o%20Botox." onclick="fbq('track', 'Contact', {content_name: 'Botox'});" rel="noopener" target="_blank" class="btn-vip">Lista VIP</a>
+                    <a href="https://cal.com/bloomy/preenchimento" onclick="fbq('track', 'Contact', {content_name: 'CAL_Sculpt'});" target="_blank" class="btn-bloomy btn-dark">Agendar Avaliação</a>
                 </div>
             </div>
-
-            <div class="col-md-4 reveal" style="animation-delay: 0.2s;">
-                <div class="card-procedimento" style="background: var(--dark); color: white;">
-                    <div>
-                        <span class="card-category" style="color: var(--gold);">Refinamento</span>
-                        <h3 class="serif h4 mb-3" style="color: white;">Sculpting & Contour</h3>
-                        <p class="small mb-4" style="color: #aaa;">Uso artístico do ácido hialurônico para estruturar faces e realçar contornos com harmonia absoluta. Realce estratégico de pontos de luz e sombra.</p>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20prioridade%20para%20o%20Preenchimento." onclick="fbq('track', 'Contact', {content_name: 'Preenchimento'});" rel="noopener" target="_blank" class="btn-vip" style="background-color: var(--gold);">Quero Prioridade</a>
-                </div>
-            </div>
-
-            <div class="col-md-4 reveal" style="animation-delay: 0.4s;">
-                <div class="card-procedimento">
-                    <div>
-                        <span class="card-category">Firmeza</span>
-                        <h3 class="serif h4 mb-3">Arquitetura de Colágeno</h3>
-                        <p class="small text-muted mb-4">Bioestimuladores que recuperam a densidade da pele de dentro para fora. Sustentação natural que respeita o tempo.</p>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20Bioestimuladores." onclick="fbq('track', 'Contact', {content_name: 'Bioestimuladores'});" rel="noopener" target="_blank" class="btn-vip">Lista VIP</a>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section class="py-5 text-center">
-        <div class="container">
-            <h2 class="serif" style="font-size: 1.5rem; color: var(--gold);">"A beleza começa no momento em que você decide ser você mesma."</h2>
-        </div>
-    </section>
-    
     <footer>
         <div class="container">
-            <h2 class="serif h4 mb-4">Dra. Jeniffer Campelo</h2>
-            <p class="text-muted small">
-                <i class="fas fa-map-marker-alt me-2"></i> Brooklin<br>
-                <i class="fas fa-certificate me-2"></i> Especialista em Estética Avançada
-            </p>
-            <div class="mt-5" style="letter-spacing: 3px; font-size: 0.6rem; opacity: 0.5;">
-                © 2026 BLOOMY • TODOS OS DIREITOS RESERVADOS
-            </div>
+            <span class="brand-logo" style="margin-bottom: 20px;">Bloomy Estética Avançada</span>
+            <p class="text-muted small">Brooklin • São Paulo<br>Dra. Jeniffer Campelo</p>
+            <div class="mt-5" style="letter-spacing: 3px; font-size: 0.6rem; opacity: 0.4;">© 2026 BLOOMY • TODOS OS DIREITOS RESERVADOS</div>
         </div>
     </footer>
 
