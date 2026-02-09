@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta name="google-site-verification" content="KCnVOS-mPr2Sny3LehoKEA3l6yi-lw34gQ8-6xANuRM" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google-site-verification" content="KCnVOS-mPr2Sny3LehoKEA3l6yi-lw34gQ8-6xANuRM" />
+    
     <title>Bloomy | Dra. Jeniffer Campelo - Estética Avançada</title>
-    
-    <meta name="description" content="Descubra a sua melhor versão no Brooklin. Harmonização, Limpeza de Pele e Microagulhamento com a Dra. Jeniffer Campelo.">
-    
+    <meta name="description" content="Especialista em naturalidade e gerenciamento de pele em São Paulo. Botox, Preenchimento e Bioestimuladores com a Dra. Jeniffer Campelo.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bloomypro.com.br/">
+    <meta property="og:title" content="Bloomy | Dra. Jeniffer Campelo - Estética Avançada">
+    <meta property="og:description" content="Realce sua melhor versão com protocolos exclusivos e naturalidade preservada no coração do Brooklin.">
+    <meta property="og:image" content="https://bloomypro.com.br/img/share-thumb.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bloomy | Estética Avançada">
+    <meta name="twitter:description" content="Naturalidade e ciência no Brooklin, Vila Olímpia e Chácara Santo Antônio.">
+    <meta name="twitter:image" content="https://bloomypro.com.br/img/share-thumb.jpg">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,11 +37,11 @@
             color: var(--dark); 
             line-height: 1.8;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         .serif { font-family: 'Playfair Display', serif; }
 
-        /* Animações */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -39,7 +49,6 @@
 
         .reveal { animation: fadeInUp 1s ease forwards; }
 
-        /* Hero Section Premium */
         .hero { 
             padding: 160px 0 100px; 
             text-align: center;
@@ -71,14 +80,11 @@
             font-weight: 300;
         }
 
-        /* Seção Sobre / Conceito */
         .concept-section { padding: 80px 0; background: #fff; }
 
-        /* Cards de Procedimentos - Minimalismo de Luxo */
         .card-procedimento {
             background: white;
             border: none;
-            border-radius: 0; /* Design mais arquitetônico */
             padding: 50px 40px;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             height: 100%;
@@ -103,8 +109,7 @@
             display: block;
         }
 
-        /* Botões de Conversão */
-        .btn-booking {
+        .btn-vip {
             display: inline-block;
             background-color: var(--dark);
             color: white !important;
@@ -116,51 +121,15 @@
             text-decoration: none !important;
             transition: 0.3s;
             border: none;
-            margin-top: 30px;
-        }
-
-        .btn-booking:hover { 
-            background-color: var(--gold);
-            letter-spacing: 3px;
-        }
-
-        .btn-outline-gold {
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 15px 40px;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
-        }
-
-        .btn-outline-gold:hover {
-            background: var(--gold);
-            color: white;
-        }
-
-        .btn-vip {
-            display: inline-block;
-            background-color: var(--dark);
-            color: white !important; /* Força o branco em vez do azul */
-            padding: 16px 35px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            text-decoration: none !important; /* Mata o sublinhado */
-            transition: 0.3s;
-            border: none;
             cursor: pointer;
+            text-align: center;
         }
         
         .btn-vip:hover { 
             background-color: var(--gold);
-            color: white !important;
             letter-spacing: 3px;
-            text-decoration: none !important;
         }
-        
-        /* WhatsApp Flutuante */
+
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -177,44 +146,36 @@
             line-height: 65px;
             transition: 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.1); color: #fff; }
 
-        footer { 
-            padding: 80px 0; 
-            text-align: center; 
-            background: white; 
-            border-top: 1px solid #eee;
-        }
+        footer { padding: 80px 0; text-align: center; background: white; border-top: 1px solid #eee; }
     </style>
 
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1627025371967288');
-    fbq('track', 'PageView');
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1627025371967288');
+        fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1627025371967288&ev=PageView&noscript=1"
-    /></noscript>
-    
 </head>
 <body>
 
-    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20entrar%20para%20a%20Lista%20VIP." onclick="fbq('track', 'Contact', {content_name: 'Botao Flutuante'});" class="whatsapp-float" rel="noopener" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20entrar%20para%20a%20Lista%20VIP%20da%20Bloomy." 
+       onclick="fbq('track', 'Contact', {content_name: 'Botao Flutuante'});" 
+       class="whatsapp-float" rel="noopener" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <header class="hero container reveal">
         <span class="brand-logo">Bloomy • Estética Avançada</span>
         <h1 class="serif">A ciência da beleza com <br><i>um olhar artístico.</i></h1>
-        <p>Especialista em realçar sua melhor versão através de protocolos exclusivos no coração do Brooklin.</p>
-        <a href="#agendar" class="btn-outline-gold serif">Explorar Protocolos</a>
+        <p>Especialista em naturalidade e gerenciamento de pele no coração do Brooklin.</p>
+        <a href="#agendar" class="btn-vip" style="background-color: transparent; border: 1px solid var(--gold); color: var(--gold) !important;">Conhecer Protocolos</a>
     </header>
 
     <section class="concept-section text-center">
@@ -222,14 +183,14 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <span class="card-category">O Conceito</span>
-                    <h2 class="serif mb-4">Por que a Bloomy?</h2>
-                    <p class="text-muted">Acreditamos que cada rosto conta uma história única. No Brooklin, a Dra. Jeniffer Campelo combina técnicas de estética avançada com uma sensibilidade artística para entregar resultados que não apenas transformam, mas preservam a sua essência.</p>
+                    <h2 class="serif mb-4">Inauguração em Breve</h2>
+                    <p class="text-muted">A Dra. Jeniffer Campelo traz para o Brooklin uma estética que respeita a sua essência. Unimos técnica avançada à sensibilidade para resultados fidedignos e elegantes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--<section id="agendar" class="container py-5">
+	<!--<section id="agendar" class="container py-5">
         <div class="row g-5 justify-content-center">
 
             <div class="col-md-4 reveal" style="animation-delay: 0.6s;">
@@ -267,42 +228,77 @@
 
         </div>
     </section>-->
+
     <section id="agendar" class="container py-5">
+        <div class="text-center mb-5 reveal">
+            <span class="card-category">Estrutura & Harmonia Sutil</span>
+            <h2 class="serif">Naturalidade & Contorno</h2>
+        </div>
         <div class="row g-5 justify-content-center">
 
-            <div class="col-md-4 reveal" style="animation-delay: 0.6s;">
+            <div class="col-md-4 reveal">
+                <div class="card-procedimento">
+                    <div>
+                        <span class="card-category">Prevenção</span>
+                        <h3 class="serif h4 mb-3">Botox Fresh & Prevent</h3>
+                        <p class="small text-muted mb-4">Gerenciamento estratégico das linhas de expressão para um rosto descansado e natural, preservando sua identidade.</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20entrar%20na%20lista%20VIP%20para%20o%20Botox." onclick="fbq('track', 'Contact', {content_name: 'Botox'});" rel="noopener" target="_blank" class="btn-vip">Lista VIP</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal" style="animation-delay: 0.2s;">
                 <div class="card-procedimento" style="background: var(--dark); color: white;">
                     <div>
-                        <span class="card-category" style="color: var(--gold);">O Primeiro Passo</span>
-                        <h3 class="serif h4 mb-3" style="color: white;">Consulta Estética</h3>
-                        <p class="small mb-4" style="color: #aaa;">Uma análise minuciosa da sua face para criarmos o seu Plano de Tratamento Individualizado.</p>
+                        <span class="card-category" style="color: var(--gold);">Refinamento</span>
+                        <h3 class="serif h4 mb-3" style="color: white;">Sculpting & Contour</h3>
+                        <p class="small mb-4" style="color: #aaa;">Uso artístico do ácido hialurônico para estruturar faces e realçar contornos com harmonia absoluta.</p>
                     </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20prioridade%20para%20agendar%20minha%20Avaliação%20na%20inauguração." onclick="fbq('track', 'Contact', {content_name: 'Consulta Estetica'});" rel="noopener" target="_blank" class="btn-vip" style="background-color: var(--gold);">Quero Prioridade</a>                   
+                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20prioridade%20para%20o%20Preenchimento." onclick="fbq('track', 'Contact', {content_name: 'Preenchimento'});" rel="noopener" target="_blank" class="btn-vip" style="background-color: var(--gold);">Quero Prioridade</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal" style="animation-delay: 0.4s;">
+                <div class="card-procedimento">
+                    <div>
+                        <span class="card-category">Firmeza</span>
+                        <h3 class="serif h4 mb-3">Arquitetura de Colágeno</h3>
+                        <p class="small text-muted mb-4">Bioestimuladores que recuperam a densidade da pele de dentro para fora. Sustentação natural que respeita o tempo.</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20Bioestimuladores." onclick="fbq('track', 'Contact', {content_name: 'Bioestimuladores'});" rel="noopener" target="_blank" class="btn-vip">Lista VIP</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="text-center mb-5 reveal">
+            <span class="card-category">Viço & Textura</span>
+            <h2 class="serif">Saúde da Pele</h2>
+        </div>
+        <div class="row g-5 justify-content-center">
+            <div class="col-md-4 reveal">
+                <div class="card-procedimento">
+                    <div>
+                        <span class="card-category">Luminosidade</span>
+                        <h3 class="serif h4 mb-3">Protocolo Glow</h3>
+                        <p class="small text-muted mb-4">Muito além de uma limpeza de pele. Uma desintoxicação profunda para um brilho imediato.</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Quero%20entrar%20na%20lista%20VIP%20para%20o%20Protocolo%20Glow." onclick="fbq('track', 'Contact', {content_name: 'Glow'});" rel="noopener" target="_blank" class="btn-vip">Lista VIP</a>
                 </div>
             </div>
             
             <div class="col-md-4 reveal" style="animation-delay: 0.2s;">
                 <div class="card-procedimento">
                     <div>
-                        <span class="card-category">Saúde da Pele</span>
-                        <h3 class="serif h4 mb-3">Protocolo Glow</h3>
-                        <p class="small text-muted mb-4">Muito além de uma limpeza de pele. Uma desintoxicação profunda com hidratação de alta performance para um brilho imediato.</p>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20entrar%20na%20lista%20VIP%20para%20o%20Protocolo%20Glow." onclick="fbq('track', 'Contact', {content_name: 'Limpeza de Pele'});" rel="noopener" target="_blank" class="btn-vip" style="background-color: var(--gold);">Lista de Espera</a>
-                </div>
-            </div>
-    
-            <div class="col-md-4 reveal" style="animation-delay: 0.4s;">
-                <div class="card-procedimento">
-                    <div>
-                        <span class="card-category">Renovação Celular</span>
+                        <span class="card-category">Renovação</span>
                         <h3 class="serif h4 mb-3">Indução de Colágeno</h3>
-                        <p class="small text-muted mb-4">Microagulhamento de precisão para tratar textura, poros e cicatrizes, devolvendo a densidade à sua pele.</p>
+                        <p class="small text-muted mb-4">Microagulhamento de precisão para tratar textura e devolver a densidade à sua pele.</p>
                     </div>
-                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20entrar%20na%20lista%20VIP%20para%20o%20Microagulhamento." onclick="fbq('track', 'Contact', {content_name: 'Microagulhamento'});" rel="noopener" target="_blank" class="btn-vip" style="background-color: var(--gold);">Lista de Espera</a>
+                    <a href="https://api.whatsapp.com/send?phone=5511965398187&text=Olá!%20Gostaria%20de%20entrar%20na%20lista%20VIP%20para%20o%20Microagulhamento." onclick="fbq('track', 'Contact', {content_name: 'Microagulhamento'});" rel="noopener" target="_blank" class="btn-vip">Lista VIP</a>
                 </div>
             </div>
-       
         </div>
     </section>
 
@@ -311,75 +307,12 @@
             <h2 class="serif" style="font-size: 1.5rem; color: var(--gold);">"A beleza começa no momento em que você decide ser você mesma."</h2>
         </div>
     </section>
-
-    <!--<section class="py-5" style="background-color: #fff;">
-        <div class="container py-5 reveal">
-            <div class="text-center mb-5">
-                <span class="card-category">Experiências Bloomy</span>
-                <h2 class="serif h2">Resultados que inspiram</h2>
-                <p class="text-muted mx-auto" style="max-width: 500px;">A satisfação de nossas clientes é o reflexo da nossa dedicação técnica e artística.</p>
-            </div>
-    
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="p-4 rounded-4 shadow-sm h-100" style="background-color: var(--nude); border: 1px solid #f0ece9;">
-                        <div class="mb-3" style="color: var(--gold);">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="fst-italic mb-4" style="font-size: 0.95rem;">"A Dra. Jeniffer é extremamente cuidadosa. Fiz o microagulhamento e minha pele nunca esteve tão radiante e uniforme. O atendimento no Brooklin é impecável!"</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ms-0">
-                                <h6 class="mb-0 serif" style="font-weight: 700;">Mariana S.</h6>
-                                <small class="text-muted" style="font-size: 0.75rem; letter-spacing: 1px;">Protocolo Glow</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-4">
-                    <div class="p-4 rounded-4 shadow-sm h-100" style="background-color: var(--nude); border: 1px solid #f0ece9;">
-                        <div class="mb-3" style="color: var(--gold);">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="fst-italic mb-4" style="font-size: 0.95rem;">"Fiz minha primeira avaliação e me senti muito segura. O plano de tratamento foi explicado detalhadamente. Resultado super natural, exatamente como eu queria."</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ms-0">
-                                <h6 class="mb-0 serif" style="font-weight: 700;">Beatriz F.</h6>
-                                <small class="text-muted" style="font-size: 0.75rem; letter-spacing: 1px;">Consulta Estética</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-4">
-                    <div class="p-4 rounded-4 shadow-sm h-100" style="background-color: var(--nude); border: 1px solid #f0ece9;">
-                        <div class="mb-3" style="color: var(--gold);">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="fst-italic mb-4" style="font-size: 0.95rem;">"A clínica é linda e a Dra. transmite muita autoridade. O cuidado pós-procedimento faz toda a diferença. Com certeza virei cliente fiel."</p>
-                        <div class="d-flex align-items-center">
-                            <div class="ms-0">
-                                <h6 class="mb-0 serif" style="font-weight: 700;">Carla M.</h6>
-                                <small class="text-muted" style="font-size: 0.75rem; letter-spacing: 1px;">Microagulhamento</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="text-center mt-5">
-                <a href="https://www.google.com/search?q=bloomy+estetica+brooklin" target="_blank" class="text-dark text-decoration-none small fw-bold" style="letter-spacing: 2px;">
-                    LER MAIS AVALIAÇÕES NO GOOGLE <i class="fas fa-external-link-alt ms-2" style="font-size: 0.7rem;"></i>
-                </a>
-            </div>
-        </div>
-    </section> -->
     
     <footer>
         <div class="container">
             <h2 class="serif h4 mb-4">Dra. Jeniffer Campelo</h2>
             <p class="text-muted small">
-                <i class="fas fa-map-marker-alt me-2"></i> Brooklin, São Paulo<br>
+                <i class="fas fa-map-marker-alt me-2"></i> Brooklin<br>
                 <i class="fas fa-certificate me-2"></i> Especialista em Estética Avançada
             </p>
             <div class="mt-5" style="letter-spacing: 3px; font-size: 0.6rem; opacity: 0.5;">
